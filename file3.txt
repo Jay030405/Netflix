@@ -113,48 +113,37 @@ mvn package
 
 java -cp target/MavenDemo-1.0-SNAPSHOT.jar com.college.App
 
+
 pract9
 
-Your WAR file name is:
+mvn archetype:generate
 
-MyWebApp.war
+maven-archetype-webapp
 
-Instead of:
+3
 
-MyWebApp-1.0-SNAPSHOT.war
+groupId: org.mywebapp.com
+artifactId: MyWebApp
+version: 1.0-SNAPSHOT
+package: com.college
+ Y: Y
 
-This just means your pom.xml version is different, so Maven created a shorter name. Both are valid.
+cd MyWebApp
 
-What you should do now
-1️⃣ Copy the WAR file
+mvn compile
 
-Copy:
+mvn package
 
-MyWebApp.war
+go to your project folder -> MyWebApp -> target -> copy  WAR file
 
-from:
+go to tomcat -> apache tomcat -> webapps -> paste here 
 
-C:\Users\Ayan\prac9\MyWebApp\target
-2️⃣ Paste it in Tomcat
+go to tomcat -> apache tomcat -> bin -> open cmd
 
-Paste it into:
+enter startup.bat
+(to  stop server : shutdown.bat)
 
-C:\tomcat\apache-tomcat-9.0.115\webapps
-3️⃣ Restart Tomcat
+server willl start 
 
-Run:
-
-cd C:\tomcat\apache-tomcat-9.0.115\bin
-shutdown.bat
-startup.bat
-4️⃣ Open your web app
-
-Open browser:
-
-http://localhost:8080/MyWebApp
-
-You should see:
-
-Hello World!
-
-from your index.jsp.
+go to browser -> search localhost:8080/MyWebApp/
+Hello World
