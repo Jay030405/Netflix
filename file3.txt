@@ -89,3 +89,72 @@ git push -u origin <branch-name>
 git pull origin <branch-name>
 
 git push origin --delete <branch-name>
+
+
+pract8
+
+mvn archetype:generate
+
+maven-archetype-quickstart
+
+3
+
+groupId: com.college
+artifactId: MavenDemo
+version: 1.0-SNAPSHOT
+package: com.college
+ Y: Y
+
+cd MavenDemo
+
+mvn compile
+
+mvn package
+
+java -cp target/MavenDemo-1.0-SNAPSHOT.jar com.college.App
+
+pract9
+
+Your WAR file name is:
+
+MyWebApp.war
+
+Instead of:
+
+MyWebApp-1.0-SNAPSHOT.war
+
+This just means your pom.xml version is different, so Maven created a shorter name. Both are valid.
+
+What you should do now
+1️⃣ Copy the WAR file
+
+Copy:
+
+MyWebApp.war
+
+from:
+
+C:\Users\Ayan\prac9\MyWebApp\target
+2️⃣ Paste it in Tomcat
+
+Paste it into:
+
+C:\tomcat\apache-tomcat-9.0.115\webapps
+3️⃣ Restart Tomcat
+
+Run:
+
+cd C:\tomcat\apache-tomcat-9.0.115\bin
+shutdown.bat
+startup.bat
+4️⃣ Open your web app
+
+Open browser:
+
+http://localhost:8080/MyWebApp
+
+You should see:
+
+Hello World!
+
+from your index.jsp.
