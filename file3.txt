@@ -158,3 +158,4 @@ You should see:
 Hello World!
 
 from your index.jsp.
+hello
